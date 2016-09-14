@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box; }
+  html *, html *::before, html *::after {
+    box-sizing: inherit; }
+
+body {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background: #2b1a4d;
+  color: white; }
+
+button {
+  -webkit-app-region: no-drag; }
+
+.time {
+  display: block;
+  width: 100vw;
+  height: 60vh;
+  border: 1px solid white; }
+
+.weather {
+  display: block;
+  width: 100vw;
+  height: 40vh;
+  border: 1px solid white; }
+
+.container {
+  display: table;
+  padding: .67rem;
+  height: 100%;
+  text-align: center; }
