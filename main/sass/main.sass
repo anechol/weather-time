@@ -1,3 +1,7 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto'
+
+$font: 'Roboto', sans-serif
+
 html
 	box-sizing: border-box
 	*, *::before, *::after
@@ -5,6 +9,7 @@ html
 
 body
 	font-size: 16px
+	font-family: $font
 	padding: 0
 	margin: 0
 	background: hsl(260, 50%, 20%)
@@ -16,17 +21,25 @@ button
 .time
 	display: block
 	width: 100vw
-	height: 60vh
-	border: 1px solid white
+	height: 65vh
+	border-bottom: 1px solid white
 
 .weather
 	display: block
 	width: 100vw
-	height: 40vh
-	border: 1px solid white
+	height: 35vh
+	border-top: 1px solid white
 
 .container
 	display: table
 	padding: .67rem
 	height: 100%
+	width: 100%
 	text-align: center
+
+#currentTime, #currentWeather
+	display: table-cell
+	vertical-align: middle
+
+#currentTime
+	font-size: 6rem

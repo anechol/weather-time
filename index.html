@@ -8,21 +8,30 @@
 </head>
 
 <body style="webkit-app-region: drag">
+
 	<div class="time">
 		<div class="container">
-			<p>INSERT TIME HERE</p>
+			<div id="currentTime">
+				<!-- <p>Time</p> -->
+			</div>
 		</div>
 	</div>
 
 	<div class="weather">
 		<div class="container">
-			<p>INSERT TIME HERE</p>
+			<div id="currentWeather">
+				<!-- <p>Weather</p> -->
+			</div>
 		</div>
 	</div>
 
 	<script src="./main.js" charset="utf-8"></script>
+	<script src="main/js/time.js" charset="utf-8"></script>
+	<script src="main/js/weather.js" charset="utf-8"></script>
 	<script src="http://localhost:35729/livereload.js"></script>
-	<script>require('electron-connect').client.create()</script>
+	<script>
+		require('electron-connect').client.create();
+	</script>
 </body>
 
 </html>
