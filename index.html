@@ -3,34 +3,51 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Hello World!</title>
+	<title>Weather Time</title>
 	<link rel="stylesheet" href="main/css/main.css" media="screen" title="no title">
 </head>
 
 <body style="webkit-app-region: drag">
 
 	<div class="time">
-		<div class="container">
-			<div id="currentTime">
-				<!-- <p>Time</p> -->
-			</div>
+		<div class="container flex">
+			<div class="flexitem align-top"></div>
+			<div class="flexitem" id="currentTime"></div>
+			<div class="flexitem" id="currentDate"></div>
+			<div class="flexitem align-bottom"></div>
 		</div>
 	</div>
 
 	<div class="weather">
-		<div class="container">
-			<div id="currentWeather">
-				<!-- <p>Weather</p> -->
-			</div>
+		<div class="container flex">
+			<div class="flexitem" id="city"></div>
+			<div class="flexitem" id="desc"></div>
+			<div class="flexitem" id="temp"></div>
+			<div class="flexitem" id="minTemp"></div>
+			<div class="flexitem" id="maxTemp"></div>
+			<div class="flexitem" id="rain"></div>
+			<div class="flexitem" id="snow"></div>
 		</div>
 	</div>
 
-	<script src="./main.js" charset="utf-8"></script>
-	<script src="main/js/time.js" charset="utf-8"></script>
-	<script src="main/js/weather.js" charset="utf-8"></script>
+	<script>
+		if (typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+
 	<script src="http://localhost:35729/livereload.js"></script>
 	<script>
 		require('electron-connect').client.create();
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="./main.js" charset="utf-8"></script>
+	<script src="main/js/time.js" charset="utf-8"></script>
+	<script src="main/js/weather.js" charset="utf-8"></script>
+
+	<script>
+		if (window.module) module = window.module;
 	</script>
 </body>
 

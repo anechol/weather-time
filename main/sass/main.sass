@@ -1,9 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto'
 
-$font: 'Roboto', sans-serif
+$font: "Roboto", sans-serif
 
 html
 	box-sizing: border-box
+
 	*, *::before, *::after
 		box-sizing: inherit
 
@@ -18,28 +19,34 @@ body
 button
 	-webkit-app-region: no-drag
 
-.time
-	display: block
-	width: 100vw
-	height: 65vh
-	border-bottom: 1px solid white
-
-.weather
-	display: block
-	width: 100vw
-	height: 35vh
-	border-top: 1px solid white
-
 .container
-	display: table
-	padding: .67rem
+	padding: 0.67rem
 	height: 100%
-	width: 100%
 	text-align: center
 
-#currentTime, #currentWeather
-	display: table-cell
-	vertical-align: middle
+.time
+	height: 65vh
+	#currentTime
+		font-size: 6rem
+	.flex
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		.flexitem
+			max-width: 100%
+		.align-top
+			align-self: flex-start
+		.align-bottom
+			align-self: flex-end
 
-#currentTime
-	font-size: 6rem
+.weather
+	width: 100vw
+	height: 35vh
+	.flex
+		display: flex
+		align-items: center
+		justify-content: space-around
+		flex-direction: row
+		.flexitem
+			max-width: 50%
